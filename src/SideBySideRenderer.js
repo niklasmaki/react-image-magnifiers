@@ -13,6 +13,7 @@ const SideBySideRenderer = props => {
     itemDimensions,
     imageSrc,
     largeImageSrc,
+    largeImageWidth,
     imageAlt,
     itemRef,
     overlayOpacity,
@@ -224,7 +225,7 @@ const SideBySideRenderer = props => {
         }}
       >
         <Image
-          style={styles.getLargeImageStyle(position.x, position.y, true)}
+          style={styles.getLargeImageStyle(position.x, position.y, true, largeImageWidth)}
           src={largeImageSrc || imageSrc}
           alt={imageAlt}
           ref={itemRef}

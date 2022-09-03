@@ -1,4 +1,4 @@
-function getLargeImageStyle(positionX, positionY, active) {
+function getLargeImageStyle(positionX, positionY, active, width = "auto") {
   return {
     position: "absolute",
     boxSizing: "border-box",
@@ -8,7 +8,7 @@ function getLargeImageStyle(positionX, positionY, active) {
     transform: `translate(${positionX}px, ${positionY}px)`,
     zIndex: "1",
     visibility: !active ? "hidden" : "visible",
-    width: "auto"
+    width: width
   };
 }
 
