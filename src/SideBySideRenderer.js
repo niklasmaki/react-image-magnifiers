@@ -201,7 +201,9 @@ const SideBySideRenderer = props => {
         style={{
           width: "100%",
           display: "block",
-          cursor: legalSize ? cursorStyle : "default"
+          cursor: legalSize ? cursorStyle : "default",
+          opacity: isActive ? "0" : "1",
+          transition: `opacity ${transSpeed}s ease`,
         }}
         src={imageSrc}
         alt={imageAlt}
