@@ -1,6 +1,6 @@
 {
   "name": "@niklasmaki/react-image-magnifiers",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "A collection of responsive, image magnifying React components for mouse and touch.",
   "keywords": [
     "react",
@@ -32,13 +32,13 @@
     "test:coverage": "jest --coverage",
     "transpile": "rimraf dist && babel src -d dist --ignore src/__tests__/*",
     "prepublishOnly": "npm run transpile",
-    "build": "rimraf examples/dist && webpack --mode production",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && rimraf examples/dist && webpack --mode production",
     "deploy": "gh-pages -d examples/dist",
     "publish-demo": "npm run build && npm run deploy"
   },
   "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.4",
@@ -64,8 +64,8 @@
     "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.9.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rimraf": "^2.7.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.43.0",
